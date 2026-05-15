@@ -27,7 +27,7 @@ jobs:
           pip install nba_api pandas
 
       - name: Run daily player script
-        run: python config.py
+        run: python backend/config.py
 
       - name: Commit and push changes
         run: |
