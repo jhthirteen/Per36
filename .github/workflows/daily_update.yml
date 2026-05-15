@@ -26,15 +26,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install nba_api pandas
 
-      - name: List files for debugging
-        run: |
-          pwd
-          ls -R
-
       - name: Run daily player script
-        # Add 'working-directory' to force the action into the backend folder
-        working-directory: ./backend
-        run: python update_daily_player.py
+        run: python config.py
 
       - name: Commit and push changes
         run: |
